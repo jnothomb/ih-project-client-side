@@ -8,9 +8,9 @@ describe('AuthLoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthLoginComponent ]
+      declarations: [AuthLoginComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -22,4 +22,5 @@ describe('AuthLoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

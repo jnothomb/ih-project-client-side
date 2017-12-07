@@ -6,28 +6,19 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
 
+import { User } from '../models/user';
 
-import { environment } from '../../environments/environment';
-import { User } from '../models/user.model'; // NOT WORKING, WHY???
-
-const apiUrl = environment.apiUrl + '/auth';
+const apiUrl = 'http://localhost:3000/auth';
 
 @Injectable()
 export class AuthService {
 
-  private loaded = false;
   private user: User;
-  private userChange: Subject<User | null> = new Subject();
-
-  // Observable string stream
-  userChange$ = this.userChange.asObservable();
 
   constructor(private http: Http) { }
 
   private setUser(user: User = null) {
-    this.loaded = true;
     this.user = user;
-    this.userChange.next(user);
   }
 
   signup(user: User) {
@@ -61,9 +52,6 @@ export class AuthService {
   }
 
   me() {
-    // if (this.loaded) {
-    //   return Promise.resolve(this.user);
-    // }
     const options = new RequestOptions();
     options.withCredentials = true;
     return this.http.get(apiUrl + '/me', options)
@@ -78,9 +66,5 @@ export class AuthService {
           this.setUser();
         }
       });
-  }
-
-  getUser() {
-    return this.user;
   }
 }
