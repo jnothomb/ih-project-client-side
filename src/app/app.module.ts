@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
 
 import { AppComponent } from './app.component';
 
@@ -26,7 +27,7 @@ import { ReservationsListComponent } from './components/reservations-list/reserv
 const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: 'auth', component: PageAuthIndividualComponent },
-  { path: 'restaurants', component: PageRestaurantPageComponent },
+  { path: 'restaurants', component: PageRestaurantListComponent },
 
 ];
 
@@ -51,7 +52,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService],
+  providers: [AuthService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

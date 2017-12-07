@@ -1,3 +1,11 @@
 <p>
   restaurant-list works!
 </p>
+
+<div class="restaurants-container-list">
+  <div class="restaurants-container-tile" *ngFor="let restaurant of restaurants">
+    <p class="name">{{restaurant.restaurant.name}}</p>
+    <!-- <img class="photo" [src]="{{restaurant.restaurant.photo}}"> -->
+    <!-- include also meals available -->
+  </div>
+</div>

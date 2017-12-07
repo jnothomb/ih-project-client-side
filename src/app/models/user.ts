@@ -4,7 +4,7 @@ export class User {
     password: string;
     email: string;
     phoneNumber: string;
-    userType: string;
+    type: string;
     restaurant: {
         name: string,
         description: string,
