@@ -13,7 +13,7 @@ import { User } from '../../models/user';
 export class AuthLoginComponent implements OnInit {
 
   user = new User({
-    username: '',
+    email: '',
     password: ''
   });
 

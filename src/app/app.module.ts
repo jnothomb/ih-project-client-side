@@ -25,7 +25,9 @@ import { ReservationsListComponent } from './components/reservations-list/reserv
 
 const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
-  { path: 'auth', component: PageAuthIndividualComponent }
+  { path: 'auth', component: PageAuthIndividualComponent },
+  { path: 'restaurants', component: PageRestaurantPageComponent },
+
 ];
 
 @NgModule({
@@ -49,7 +51,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
