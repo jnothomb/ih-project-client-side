@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+
+
 import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 
@@ -28,6 +30,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: 'auth', component: PageAuthIndividualComponent },
   { path: 'restaurants', component: PageRestaurantListComponent },
+  { path: 'restaurants/:id', component: PageRestaurantPageComponent },
+  { path: 'restaurants/:id/meals', component: PageRestaurantPageComponent }
+
 
 ];
 
@@ -51,6 +56,7 @@ const routes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes)
+
   ],
   providers: [AuthService, UserService],
   bootstrap: [AppComponent]
