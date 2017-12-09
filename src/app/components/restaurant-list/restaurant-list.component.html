@@ -1,14 +1,23 @@
-<p>
-  restaurant-list works!
-</p>
+<h3 class="restaurants-list-title"> Restaurant List </h3>
 
+<div class="restaurants-filter-container">
+  <p> Filter By Category: </p>
+  <select class="restaurants-filter-dropdown">
+    <option value="All">All</option>
+    <option value="japanese">Japanese</option>
+    <option value="italian">Italian</option>
+    <option value="peruvian">Peruvian</option>
+  </select>
+</div>
 
-<div class="restaurants-container-list">
-  <div class="restaurants-container-tile" *ngFor="let user of users">
+<div class="restaurants-list-container">
+
+  <div class="restaurants-list-tiles" *ngFor="let user of users">
     <a [routerLink]="['restaurants', user._id]">
-      <img class="photo" [src]="user.restaurant.photo">
+      <!-- <img class="photo " [src]="user.restaurant.photo "> -->
       <p class="name">{{user.restaurant.name}}</p>
     </a>
     <!-- include also meals available -->
   </div>
+
 </div>

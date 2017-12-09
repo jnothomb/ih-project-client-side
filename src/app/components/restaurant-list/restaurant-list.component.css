@@ -1,3 +1,36 @@
-.restaurants-container-list {
-  border: 1px solid red;
+window {
+  background: rgb(120, 164, 241);
+}
+
+.restaurants-filter-container {
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin: 1vh auto;
+  padding: 3vh;
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+}
+
+.restaurants-filter-dropdown {
+  border: 1px solid orange;
+  margin: 1vh auto;
+}
+
+.restaurants-list-container {
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin: 1vh auto;
+  padding: 3vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.restaurants-list-tiles {
+  border: 1px solid green;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0px 2vh;
+  text-align: center;
+  width: 15vh;
 }
