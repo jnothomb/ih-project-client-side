@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 
-
-import { User } from '../../models/user';
 
 @Component({
   selector: 'app-restaurant-details',
@@ -13,22 +8,13 @@ import { User } from '../../models/user';
 })
 export class RestaurantDetailsComponent implements OnInit {
 
-  users;
+  @Input() user;
 
 
-  constructor(private user: UserService,
-    private route: ActivatedRoute,
-  ) { }
+  constructor() { }
 
   ngOnInit() {
 
-    this.route.params.subscribe(params => {
-      const id = params['id'];
-      this.user.getRestaurantId(id)
-        .subscribe((users) => {
-          this.users = users;
-        });
-    });
   }
 
 }

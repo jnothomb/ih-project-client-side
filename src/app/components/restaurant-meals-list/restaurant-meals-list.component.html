@@ -1,3 +1,16 @@
 <p>
   restaurant-meals-list works!
 </p>
+
+<div class="restaurant-meals-container" *ngIf="!meals.length">
+  No meals available at the moment
+</div>
+
+<div class="restaurant-meals-container" *ngFor="let meal of meals">
+  <h3>{{meal.name}}</h3>
+  <h5>{{meal.availablePortions}}</h5>
+  <div class="form-group field">
+    <label>I want: </label>
+    <input type="text">
+  </div>
+</div>

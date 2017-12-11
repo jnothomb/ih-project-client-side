@@ -26,8 +26,8 @@ export class UserService {
       .map((res) => res.json());
   }
 
-  getRestaurantMeals() {
-    return this.http.get(`${this.baseURL}/restaurants/:id/meals`)
+  getRestaurantMeals(id) {
+    return this.http.get(`${this.baseURL}/restaurants/${id}/meals`)
       .map((res) => res.json());
   }
 

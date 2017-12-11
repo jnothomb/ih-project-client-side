@@ -2,4 +2,5 @@
   page-restaurant-page works!
 </p>
 
-<app-restaurant-details></app-restaurant-details>
+<app-restaurant-details [user]="user" *ngIf="user"></app-restaurant-details>
+<app-restaurant-meals-list [meals]="meals" *ngIf="meals"></app-restaurant-meals-list>

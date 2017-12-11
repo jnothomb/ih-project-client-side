@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 
-
-import { Meal } from '../../models/meal';
 
 @Component({
   selector: 'app-restaurant-meals-list',
@@ -12,15 +8,10 @@ import { Meal } from '../../models/meal';
 })
 export class RestaurantMealsListComponent implements OnInit {
 
-  meals;
+  @Input() meals;
 
-  constructor(private user: UserService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.user.getRestaurantMeals()
-      .subscribe((meals) => {
-        this.meals = meals;
-      });
   }
-
 }
