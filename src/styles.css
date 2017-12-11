@@ -12,3 +12,21 @@ p {
   /* text-decoration: none; */
   letter-spacing: 2px;
 }
+
+h1 {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h3 {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h4 {
+  color: darkblue;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
