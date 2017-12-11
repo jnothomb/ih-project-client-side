@@ -1,19 +1,24 @@
-<p> auth-login works! </p>
+<div class="individual-auth-login-container">
 
-<!-- CODE FROM ANDRE -->
+  <h4 class="individual-auth-login-title"> Login </h4>
 
-<form [ngClass]="{'has-error': error}" novalidate>
-  <div class="form-group field" [ngClass]="{'has-error': error}">
-    <label>E-Mail</label>
-    <input type="email" [(ngModel)]="user.email" name="email" required/>
-  </div>
-  <div class="form-group field" [ngClass]="{'has-error': error}">
-    <label>Password</label>
-    <input type="password" [(ngModel)]="user.password" name="password" required/>
-  </div>
-  <div class="form-group actions">
-    <button (click)="login()">login</button>
-    <p *ngIf="error" class="error">{{error}}</p>
-  </div>
-</form>
-<!-- xxx{{user | json}}xxx -->
+  <form [ngClass]="{'has-error': error}" novalidate>
+
+    <div class="form-group field" [ngClass]="{'has-error': error}">
+      <label>E-Mail</label>
+      <input type="email" [(ngModel)]="user.email" name="email" required/>
+    </div>
+
+    <div class="form-group field" [ngClass]="{'has-error': error}">
+      <label>Password</label>
+      <input type="password" [(ngModel)]="user.password" name="password" required/>
+    </div>
+
+    <div class="form-group actions">
+      <button (click)="login()">Login</button>
+      <p *ngIf="error" class="error">{{error}}</p>
+    </div>
+
+  </form>
+
+</div>
