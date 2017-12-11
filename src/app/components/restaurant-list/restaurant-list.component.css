@@ -1,10 +1,19 @@
-window {
-  background: rgb(120, 164, 241);
+/* RESTAURANTS LIST TITLE */
+
+.restaurants-list-title {
+  color: white;
+  font-style: bold;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
+
+/* CATEGORIES FILTER */
+
 .restaurants-filter-container {
-  border: 1px solid grey;
-  border-radius: 15px;
+  background: white;
+  /* border: 1px solid grey; */
+  border-radius: 10px;
   margin: 1vh auto;
   padding: 3vh;
   display: flex;
@@ -17,20 +26,26 @@ window {
   margin: 1vh auto;
 }
 
+
+/* RESTAURANT LIST AND TILES */
+
 .restaurants-list-container {
-  border: 1px solid grey;
-  border-radius: 15px;
+  background: white;
+  /* border: 1px solid grey; */
+  border-radius: 10px;
   margin: 1vh auto;
   padding: 3vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .restaurants-list-tiles {
   border: 1px solid green;
   justify-content: space-around;
   align-items: flex-start;
-  margin: 0px 2vh;
+  margin: 1vh auto;
   text-align: center;
-  width: 15vh;
+  width: 80%;
+  height: 10vh;
+  border-radius: 10px;
 }
