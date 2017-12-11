@@ -1,6 +1,11 @@
 .individual-auth-signup-container {
+  display: flex;
+  flex-direction: column;
   background-color: lightgrey;
   margin: 5px auto;
+  padding: 3vh;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .individual-auth-signup-title {
