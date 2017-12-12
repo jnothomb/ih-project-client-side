@@ -56,4 +56,23 @@ export class UserService {
       .map((res) => res.json());
   }
 
+
+  getUserProfile(id) {
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/edit-profile/${id}`, options)
+      .map((res) => res.json());
+  }
+
+
+  editProfile(id) {
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.post(`${this.baseURL}/edit-profile/${id}`, id, options)
+      .map((res) => res.json());
+  }
 }
+
+
