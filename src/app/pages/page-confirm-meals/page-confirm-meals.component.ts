@@ -30,15 +30,15 @@ export class PageConfirmMealsComponent implements OnInit {
       this.userService.getMeal(this.idMeal)
         .subscribe((meal) => {
           this.meal = meal;
+          console.log(Number(this.meal.price);
+          this.totalCost = Number(this.quantity.quantity) * this.meal.price;
+
         });
     });
     this.route.queryParams.subscribe(params => {
       this.reservation = new Reservation({
         portions: this.quantity
       });
-
-      // this.totalCost = this.quantity * this.meal.price;
-
     });
     console.log(this.idMeal, this.quantity.quantity);
   }
