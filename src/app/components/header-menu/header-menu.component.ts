@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
 
 declare var $: any;
 
@@ -11,7 +13,7 @@ declare var $: any;
 })
 export class HeaderMenuComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
     // JQuery Code for Menu Toggle
     $(document).ready(function () {
       $('.toggle-nav').click(function (e) {
