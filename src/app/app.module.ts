@@ -25,6 +25,7 @@ import { RestaurantListComponent } from './components/restaurant-list/restaurant
 import { RestaurantDetailsComponent } from './components/restaurant-details/restaurant-details.component';
 import { RestaurantMealsListComponent } from './components/restaurant-meals-list/restaurant-meals-list.component';
 import { ReservationsListComponent } from './components/reservations-list/reservations-list.component';
+import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 
 // DEFINITION OF ROUTES
 
@@ -50,7 +51,8 @@ const routes: Routes = [
     RestaurantListComponent,
     RestaurantDetailsComponent,
     RestaurantMealsListComponent,
-    ReservationsListComponent
+    ReservationsListComponent,
+    HeaderMenuComponent
   ],
   imports: [
     BrowserModule,
