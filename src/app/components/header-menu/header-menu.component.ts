@@ -23,6 +23,11 @@ export class HeaderMenuComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
+  logout() {
+    this.authService.logout().subscribe(
+      () => this.router.navigate(['/auth']));
+  }
 }
