@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'restaurants/:id', component: PageRestaurantPageComponent },
   { path: 'restaurants/:id/meals', component: PageRestaurantPageComponent },
   { path: 'meal/:id/confirm', component: PageConfirmMealsComponent },
-  { path: 'edit-profile/:id', component: PageProfileIndividualComponent },
+  { path: 'edit-profile', component: PageProfileIndividualComponent },
   { path: 'reservations', component: PageReservationsComponent }
 ];
 

@@ -30,3 +30,32 @@ h4 {
   letter-spacing: 2px;
   font-weight: bold;
 }
+
+
+/* forms */
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form .field {
+  margin-bottom: 20px;
+}
+
+form .field.has-error label {
+  color: red;
+}
+
+form .validation-error {
+  color: red;
+}
+
+form input {
+  padding: 5px;
+  width: 80%;
+}
+
+form .submit button {
+  padding: 10px 80px;
+}

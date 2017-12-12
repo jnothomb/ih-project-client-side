@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
-
+import { AuthService } from '../../services/auth.service';
+import { UserService } from '../../services/user.service';
 
 import { User } from '../../models/user';
 
@@ -15,25 +15,31 @@ import { User } from '../../models/user';
 export class PageProfileIndividualComponent implements OnInit {
   user;
   id;
+  error;
+  feedbackEnabled = false;
 
-  constructor(private userService: UserService,
+  constructor(
+    private authService: AuthService,
+    private userService: UserService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.id = params['id'];
-
-      this.userService.getUserProfile(this.id)
-        .subscribe((user) => {
-          this.user = user;
-        });
-    });
-
+    // this.user = this.authService.getUser();
+    this.authService.me()
+      .then((user) => {
+        this.user = user;
+      });
   }
 
-  editProfile() {
-    this.userService.editProfile(this.id).subscribe(
-      () => console.log('change succesful'));
+  editProfile(form) {
+    this.feedbackEnabled = true;
+    if (form.invalid) {
+      return;
+    }
+    this.userService.editProfile(this.user._id).subscribe(
+      () => console.log('change succesful'),
+      (err) => this.error = err // @toio how to capture the bqackend error message (is somehere inside the "err" vadiable)
+    );
   }
 
 }
