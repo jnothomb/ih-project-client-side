@@ -31,6 +31,13 @@ export class PageConfirmMealsComponent implements OnInit {
           this.meal = meal;
         });
     });
+    this.route.queryParams.subscribe(params => {
+      const quantity = params['quantity'];
+
+      console.log(quantity);
+    });
+
+
   }
 
   // reserveMeal() {

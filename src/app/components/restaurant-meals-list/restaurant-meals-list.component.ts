@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RestaurantMealsListComponent implements OnInit {
 
   @Input() meals;
+  quantity;
 
   constructor() { }
 
