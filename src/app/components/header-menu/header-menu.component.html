@@ -1,23 +1,24 @@
 <div class="universal-header-container">
 
-  <nav class="menu">
+  <nav class="universal-header-menu">
 
     <ul class="active">
 
       <li class="current-item">
-        <a href="#"> FOODI </a>
+        <a> FOODI </a>
       </li>
 
       <li>
-        <a href="#"> Restaurants </a>
+        <a [routerLink]="['/restaurants']"> Restaurants </a>
       </li>
 
       <li>
-        <a href="#"> Edit Profile </a>
+        <a [routerLink]="['/edit-profile', req.user]"> Edit Profile </a>
       </li>
 
+      <!-- Working Logout Button -->
       <li>
-        <a href="#"> Log Out </a>
+        <a [routerLink]="['/auth']" (click)="logout()" class="menu-logout"> Log Out </a>
       </li>
 
     </ul>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 declare var $: any;
 
@@ -9,12 +10,12 @@ declare var $: any;
 })
 export class HeaderMenuComponent implements OnInit {
 
-  // JQuery Code for Menu Toggle
-  constructor() {
+  constructor(private authService: AuthService) {
+    // JQuery Code for Menu Toggle
     $(document).ready(function () {
       $('.toggle-nav').click(function (e) {
         $(this).toggleClass('active');
-        $('.menu ul').toggleClass('active');
+        $('.universal-header-menu ul').toggleClass('active');
 
         e.preventDefault();
       });
