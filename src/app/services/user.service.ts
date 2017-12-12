@@ -16,28 +16,43 @@ export class UserService {
   constructor(private http: Http) { }
 
   getRestaurants() {
-    return this.http.get(`${this.baseURL}/restaurants`)
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/restaurants`, options)
       .map((res) => res.json());
   }
 
 
   getRestaurantId(id) {
-    return this.http.get(`${this.baseURL}/restaurants/${id}`)
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/restaurants/${id}`, options)
       .map((res) => res.json());
   }
 
   getRestaurantMeals(id) {
-    return this.http.get(`${this.baseURL}/restaurants/${id}/meals`)
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/restaurants/${id}/meals`, options)
       .map((res) => res.json());
   }
 
   getMeal(id) {
-    return this.http.get(`${this.baseURL}/meal/${id}`)
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/meal/${id}`, options)
       .map((res) => res.json());
   }
 
-  postReservation(id) {
-    return this.http.post(`${this.baseURL}/meal/${id}/confirm`, id)
+  postReservation(id, reservation) {
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.post(`${this.baseURL}/meal/${id}/confirm`, reservation, options)
       .map((res) => res.json());
   }
 
