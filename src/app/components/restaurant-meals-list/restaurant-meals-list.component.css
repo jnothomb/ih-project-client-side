@@ -1,0 +1,10 @@
+.restaurant-meals-container {
+  border: 2px solid grey;
+  margin: 1px;
+}
+
+.restaurant-meals-individual {
+  border: 1px solid white;
+  margin: 10px;
+  border-radius: 10px;
+}
