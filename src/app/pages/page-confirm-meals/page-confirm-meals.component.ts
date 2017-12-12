@@ -12,41 +12,43 @@ import { Reservation } from '../../models/reservation';
 })
 export class PageConfirmMealsComponent implements OnInit {
   meal;
-
-  // reservation = new Reservation({
-  //   client: req.user,
-  //   meal: req.params._id
-  // portions: vfvfd,   // dunno yet
-  // });
+  idMeal;
+  reservation;
+  quantity;
+  totalCost;
 
   constructor(private userService: UserService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const id = params['id'];
+      this.idMeal = params['id'];
 
-      this.userService.getMeal(id)
+      this.route.queryParams.subscribe(params =>
+        this.quantity = params);
+
+      this.userService.getMeal(this.idMeal)
         .subscribe((meal) => {
           this.meal = meal;
         });
     });
     this.route.queryParams.subscribe(params => {
-      const quantity = params['quantity'];
+      this.reservation = new Reservation({
+        portions: this.quantity
+      });
 
-      console.log(quantity);
+      // this.totalCost = this.quantity * this.meal.price;
+
     });
-
-
+    console.log(this.idMeal, this.quantity.quantity);
   }
 
-  // reserveMeal() {
-  //   this.route.params.subscribe(params => {
-  //     const id = params['id'];
-  //     this.userService.postReservation(id).subscribe(
-  //       () => this.router.navigate([''])
-  //     );
-  //   });
+  reserveMeal() {
+    this.userService.postReservation(this.idMeal, this.reservation).subscribe(
+      () => console.log('confirm'));
+  }
 
-  // }
+  calculatePrice() {
+    this.totalCost = this.quantity * this.meal.price;
+  }
 }
