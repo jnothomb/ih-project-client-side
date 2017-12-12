@@ -1,6 +1,7 @@
 export class Meal {
     name: String;
     portions: Number;
+    price: Number;
     restaurant: {
         type: String;
         availablePortions: String;

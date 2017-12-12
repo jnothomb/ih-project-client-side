@@ -33,9 +33,8 @@ const routes: Routes = [
   { path: 'auth', component: PageAuthIndividualComponent },
   { path: 'restaurants', component: PageRestaurantListComponent },
   { path: 'restaurants/:id', component: PageRestaurantPageComponent },
-  { path: 'restaurants/:id/meals', component: PageRestaurantPageComponent }
-
-
+  { path: 'restaurants/:id/meals', component: PageRestaurantPageComponent },
+  { path: 'meal/:id/confirm/:quantity', component: PageConfirmMealsComponent }
 ];
 
 @NgModule({

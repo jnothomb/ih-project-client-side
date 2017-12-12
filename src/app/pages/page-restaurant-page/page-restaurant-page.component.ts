@@ -15,7 +15,12 @@ import { User } from '../../models/user';
 })
 export class PageRestaurantPageComponent implements OnInit {
 
-  meals;
+  meals = [{
+    name: 'fooo',
+    portions: 2,
+    price: 3,
+    restaurant: '5a2ab9245772271d2056943e',
+    availablePortions: 3];
   user;
 
   constructor(private userService: UserService,
@@ -24,11 +29,11 @@ export class PageRestaurantPageComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const id = params['id'];
-      this.userService.getRestaurantMeals(id)
-        .subscribe((meals) => {
-          this.meals = meals;
+      // this.userService.getRestaurantMeals(id)
+      //   .subscribe((meals) => {
+      //     this.meals = meals;
 
-        });
+      //   });
       this.userService.getRestaurantId(id)
         .subscribe((user) => {
           this.user = user;

@@ -31,14 +31,14 @@ export class UserService {
       .map((res) => res.json());
   }
 
-  getMealConfirm(id) {
+  getMeal(id) {
     return this.http.get(`${this.baseURL}/meal/${id}`)
       .map((res) => res.json());
   }
 
-  // postReservation(id) {
-  //   return this.http.post(`${this.baseURL}/meal/${id}/confirm`)
-  //     .map((res) => res.json());
-  // }
+  postReservation(id) {
+    return this.http.post(`${this.baseURL}/meal/${id}/confirm`, id)
+      .map((res) => res.json());
+  }
 
 }

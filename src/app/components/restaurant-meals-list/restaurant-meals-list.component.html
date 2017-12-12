@@ -9,9 +9,10 @@
 <div class="restaurant-meals-container" *ngFor="let meal of meals">
   <h3>{{meal.name}}</h3>
   <h5>{{meal.availablePortions}}</h5>
+  <h6>{{meal.price}} EUR</h6>
   <div class="form-group field">
     <label>I want: </label>
-    <input type="number" name="portions" required/>
+    <input type="number" #portions name="portions" required/>
   </div>
-  <button type="submit">Reserve!</button>
+  <a [routerLink]="['/meal', meal_.id, 'confirm', portions.value]">Reserve</a>
 </div>
