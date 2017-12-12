@@ -18,6 +18,8 @@ import { PageRestaurantListComponent } from './pages/page-restaurant-list/page-r
 import { PageRestaurantPageComponent } from './pages/page-restaurant-page/page-restaurant-page.component';
 import { PageConfirmMealsComponent } from './pages/page-confirm-meals/page-confirm-meals.component';
 import { PageProfileIndividualComponent } from './pages/page-profile-individual/page-profile-individual.component';
+import { PageReservationsComponent } from './pages/page-reservations/page-reservations.component';
+
 
 import { AuthLoginComponent } from './components/auth-login/auth-login.component';
 import { AuthSignupComponent } from './components/auth-signup/auth-signup.component';
@@ -36,7 +38,8 @@ const routes: Routes = [
   { path: 'restaurants/:id', component: PageRestaurantPageComponent },
   { path: 'restaurants/:id/meals', component: PageRestaurantPageComponent },
   { path: 'meal/:id/confirm', component: PageConfirmMealsComponent },
-  { path: 'edit-profile/:id', component: PageProfileIndividualComponent }
+  { path: 'edit-profile/:id', component: PageProfileIndividualComponent },
+  { path: 'reservations', component: PageReservationsComponent }
 ];
 
 @NgModule({
@@ -53,7 +56,8 @@ const routes: Routes = [
     RestaurantDetailsComponent,
     RestaurantMealsListComponent,
     ReservationsListComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    PageReservationsComponent
   ],
   imports: [
     BrowserModule,

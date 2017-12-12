@@ -73,6 +73,15 @@ export class UserService {
     return this.http.post(`${this.baseURL}/edit-profile/${id}`, id, options)
       .map((res) => res.json());
   }
+
+  getReservations() {
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/reservations`, options)
+      .map((res) => res.json());
+  }
+
 }
 
 
