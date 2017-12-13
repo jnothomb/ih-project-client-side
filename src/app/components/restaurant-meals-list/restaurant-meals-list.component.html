@@ -3,26 +3,25 @@
 </div>
 
 <div class="restaurant-meals-container">
+  <div class="restaurant-meals-individual" *ngFor="let meal of meals; let ix = index">
+    <div *ngIf="meal.availablePortions > 0">
 
-  <div class="restaurant-meals-individual" *ngFor="let meal of meals">
+      <h3>{{meal.name}}</h3>
+      <h5>{{meal.availablePortions}}</h5>
+      <h6>{{meal.price}} EUR</h6>
 
-    <h3>{{meal.name}}</h3>
-    <h5>{{meal.availablePortions}}</h5>
-    <h6>{{meal.price}} EUR</h6>
+      <form #myForm="ngForm" (ngSubmit)="reserveMeal(myForm, portionField, meal, ix)">
+        <div class="form-group field" [ngClass]="{'has-error': feedbackEnabled && portionField.invalid}">
+          <label>I want: </label>
+          <input type="number" name="portions" required #portionField [max]="meal.availablePortions" />
+          <div class="validation-error" *ngIf="errorManager[ix]">Something Went Wrong</div>
+        </div>
 
-    <form #myForm="ngForm" (ngSubmit)="reserveMeal(myForm, portionField.value, meal._id)">
-      <div class="form-group field" [ngClass]="{'has-error': feedbackEnabled && portionField.invalid}">
-        <label>I want: </label>
-        <input type="number" name="portions" required #portionField [max]="meal.availablePortions" required />
-        <div class="validation-error" *ngIf="feedbackEnabled && portionField.invalid">Something Went Wrong</div>
-      </div>
+        <!-- <a [routerLink]="['/meal', meal._id, 'confirm']" [queryParams]="{ quantity: quantity }">Reserve</a> -->
 
-      <!-- <a [routerLink]="['/meal', meal._id, 'confirm']" [queryParams]="{ quantity: quantity }">Reserve</a> -->
+        <button type="submit">Reserve!</button>
+      </form>
 
-      <button type="submit">Reserve!</button>
-    </form>
-
-
+    </div>
   </div>
-
 </div>
