@@ -4,7 +4,7 @@ export class Meal {
     price: Number;
     restaurant: {
         type: String;
-        availablePortions: String;
+        availablePortions: Number;
         timestamps: {
             createdAt: 'created_at',
             updatedAt: 'updated_at'

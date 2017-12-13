@@ -4,7 +4,7 @@
   page-confirm-meals works!
 </p>
 <ng-container *ngIf="meal">
-  <h1>Your Reservation</h1>
+  <h1>Your Reservation from {{meal.restaurant.name}}</h1>
   <h4>{{quantity.quantity}}x {{meal.name}} </h4>
   <h6> price: {{totalCost}}</h6>
 </ng-container>

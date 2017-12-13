@@ -15,7 +15,7 @@ import { Reservation } from '../../models/reservation';
   styleUrls: ['./page-reservations.component.css']
 })
 export class PageReservationsComponent implements OnInit {
-  reservations;
+  reservations = [];
 
   constructor(private userService: UserService) { }
 

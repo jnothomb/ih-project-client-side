@@ -30,9 +30,8 @@ export class PageConfirmMealsComponent implements OnInit {
       this.userService.getMeal(this.idMeal)
         .subscribe((meal) => {
           this.meal = meal;
-          console.log(Number(this.meal.price);
+          console.log(this.meal);
           this.totalCost = Number(this.quantity.quantity) * this.meal.price;
-
         });
     });
     this.route.queryParams.subscribe(params => {
@@ -44,6 +43,7 @@ export class PageConfirmMealsComponent implements OnInit {
   }
 
   reserveMeal() {
+    this.reservation.restaurant = this.meal.restaurant._id;
     this.userService.postReservation(this.idMeal, this.reservation).subscribe(
       () => console.log('confirm'));
   }

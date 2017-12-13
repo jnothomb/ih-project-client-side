@@ -2,12 +2,14 @@
   page-reservations works!
 </p>
 
+
 <div *ngFor="let reservation of reservations">
   <h5>{{reservation.meal.name}}</h5>
   <h5>{{reservation.portions}}</h5>
   <h5>{{reservation.meal.price}}</h5>
+  <h5>{{reservation.restaurant}}</h5>
   <!-- restaurant name -->
 
 </div>
 
-{{reservations | json}}
+xxxx{{reservations | json}}

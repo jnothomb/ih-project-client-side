@@ -19,7 +19,8 @@ export class PageRestaurantPageComponent implements OnInit {
   user;
 
   constructor(private userService: UserService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -34,12 +35,11 @@ export class PageRestaurantPageComponent implements OnInit {
           this.user = user;
         });
     });
-
-
-
-
-
-
   }
 
+  // handleReserveClick(meal) {
+  //   if (meal.quantity <= meal.available) {
+  //     this.router.navigate.(['/meal', meal.id], { queryParams: { quantity: this.quantity } });
+  //   }
+  // }
 }

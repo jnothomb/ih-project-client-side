@@ -10,12 +10,18 @@
     <h5>{{meal.availablePortions}}</h5>
     <h6>{{meal.price}} EUR</h6>
 
-    <div class="form-group field">
-      <label>I want: </label>
-      <input type="number" [(ngModel)]=quantity name="portions" min="1" [max]="meal.availablePortions" required/>
-    </div>
+    <form #myForm="ngForm" (ngSubmit)="reserveMeal(myForm, portionField.value, meal._id)">
+      <div class="form-group field" [ngClass]="{'has-error': feedbackEnabled && portionField.invalid}">
+        <label>I want: </label>
+        <input type="number" name="portions" required #portionField [max]="meal.availablePortions" required />
+        <div class="validation-error" *ngIf="feedbackEnabled && portionField.invalid">Something Went Wrong</div>
+      </div>
 
-    <a [routerLink]="['/meal', meal._id, 'confirm']" [queryParams]="{ quantity: quantity }">Reserve</a>
+      <!-- <a [routerLink]="['/meal', meal._id, 'confirm']" [queryParams]="{ quantity: quantity }">Reserve</a> -->
+
+      <button type="submit">Reserve!</button>
+    </form>
+
 
   </div>
 
