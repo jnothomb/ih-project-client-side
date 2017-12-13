@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 
-import { User } from '../../models/user';
-import { Reservation } from '../../models/reservation';
 
 @Component({
   selector: 'app-reservations-list',
@@ -12,16 +7,11 @@ import { Reservation } from '../../models/reservation';
   styleUrls: ['./reservations-list.component.css']
 })
 export class ReservationsListComponent implements OnInit {
+  @Input() reservations;
 
-  reservations = [];
-
-  constructor(private userService: UserService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.userService.getReservations()
-      .subscribe((reservations) => {
-        this.reservations = reservations;
-      });
   }
 
 }
