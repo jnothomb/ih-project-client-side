@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
+
+
+import { User } from '../../models/user';
+import { Reservation } from '../../models/reservation';
+
 
 @Component({
   selector: 'app-page-reservations',
@@ -6,10 +15,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-reservations.component.css']
 })
 export class PageReservationsComponent implements OnInit {
+  reservations = [];
+  totalCosts;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getReservations()
+      .subscribe((reservations) => {
+        this.reservations = reservations;
+      });
   }
 
 }
