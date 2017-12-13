@@ -66,11 +66,11 @@ export class UserService {
   }
 
 
-  editProfile(id) {
+  editProfile(user) {
     const options = new RequestOptions();
     options.withCredentials = true;
 
-    return this.http.post(`${this.baseURL}/edit-profile/${id}`, id, options)
+    return this.http.post(`${this.baseURL}/edit-profile`, user, options)
       .map((res) => res.json());
   }
 

@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
+import { AuthGuardService } from './guards/auth-guard.service';
 
 import { AppComponent } from './app.component';
 
@@ -29,17 +30,18 @@ import { RestaurantMealsListComponent } from './components/restaurant-meals-list
 import { ReservationsListComponent } from './components/reservations-list/reservations-list.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 
+
 // DEFINITION OF ROUTES
 
 const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: 'auth', component: PageAuthIndividualComponent },
-  { path: 'restaurants', component: PageRestaurantListComponent },
-  { path: 'restaurants/:id', component: PageRestaurantPageComponent },
-  { path: 'restaurants/:id/meals', component: PageRestaurantPageComponent },
-  { path: 'meal/:id/confirm', component: PageConfirmMealsComponent },
-  { path: 'edit-profile', component: PageProfileIndividualComponent },
-  { path: 'reservations', component: PageReservationsComponent }
+  { path: 'restaurants', canActivate: [AuthGuardService], component: PageRestaurantListComponent },
+  { path: 'restaurants/:id', canActivate: [AuthGuardService], component: PageRestaurantPageComponent },
+  { path: 'restaurants/:id/meals', canActivate: [AuthGuardService], component: PageRestaurantPageComponent },
+  { path: 'meal/:id/confirm', canActivate: [AuthGuardService], component: PageConfirmMealsComponent },
+  { path: 'edit-profile', canActivate: [AuthGuardService], component: PageProfileIndividualComponent },
+  { path: 'reservations', canActivate: [AuthGuardService], component: PageReservationsComponent }
 ];
 
 @NgModule({
@@ -66,7 +68,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
 
   ],
-  providers: [AuthService, UserService],
+  providers: [AuthService, UserService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,19 +16,25 @@ export class RestaurantMealsListComponent implements OnInit {
   quantity;
   feedbackEnabled = false;
 
-
+  errorManager = [];
   constructor(private router: Router,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
-  reserveMeal(form, quantity, id) {
+  reserveMeal(form, inputField, meal, ix) {
     this.feedbackEnabled = true;
 
     if (form.invalid) {
       return;
     } else {
-      this.router.navigate(['/meal', id, 'confirm'], { queryParams: { quantity } });
+      if (inputField.value > meal.availablePortions) {
+        console.log('u cant!');
+        inputField.value = null;
+        this.errorManager[ix] = true;
+      } else {
+        this.router.navigate(['/meal', meal._id, 'confirm'], { queryParams: { quantity: inputField.value } });
+      }
     }
   }
 }

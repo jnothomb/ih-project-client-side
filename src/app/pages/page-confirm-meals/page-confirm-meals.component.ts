@@ -15,7 +15,7 @@ export class PageConfirmMealsComponent implements OnInit {
   idMeal;
   reservation;
   quantity;
-  totalCost;
+  //  totalCost;
 
   constructor(private userService: UserService,
     private route: ActivatedRoute,
@@ -32,7 +32,7 @@ export class PageConfirmMealsComponent implements OnInit {
         .subscribe((meal) => {
           this.meal = meal;
           console.log(this.meal);
-          this.totalCost = Number(this.quantity.quantity) * this.meal.price;
+          // this.totalCost = Number(this.quantity.quantity) * this.meal.price;
         });
     });
     this.route.queryParams.subscribe(params => {
