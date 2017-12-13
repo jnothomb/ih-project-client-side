@@ -10,7 +10,7 @@
 @media screen and (min-width: 860px) {
   .universal-header-menu {
     width: 100%;
-    padding: 10px 18px;
+    padding: 10px 0px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     background: #303030;
@@ -19,6 +19,7 @@
 
 .universal-header-menu ul {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .universal-header-menu li {
