@@ -18,7 +18,8 @@ export class PageConfirmMealsComponent implements OnInit {
   totalCost;
 
   constructor(private userService: UserService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -45,10 +46,6 @@ export class PageConfirmMealsComponent implements OnInit {
   reserveMeal() {
     this.reservation.restaurant = this.meal.restaurant._id;
     this.userService.postReservation(this.idMeal, this.reservation).subscribe(
-      () => console.log('confirm'));
-  }
-
-  calculatePrice() {
-    this.totalCost = this.quantity * this.meal.price;
+      () => this.router.navigate(['/reservations']));
   }
 }
