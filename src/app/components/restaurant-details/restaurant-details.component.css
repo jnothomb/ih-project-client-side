@@ -1,3 +1,12 @@
-.restaurants-container-details {
+.restaurants-details-container {
   border: 2px solid grey;
+}
+
+.restaurants-details-photo {
+  margin: 0px auto;
+  /* clip-path: circle(75px at 50% 50%) */
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }

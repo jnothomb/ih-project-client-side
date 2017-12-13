@@ -11,8 +11,8 @@
 
   <div class="restaurants-list-tiles" *ngFor="let user of users">
     <a [routerLink]="['/restaurants', user._id]">
-      <!-- <img class="photo " [src]="user.restaurant.photo "> -->
-      <h4 class="name">{{user.restaurant.name}}</h4>
+      <img class="restaurants-list-photo" [src]="user.restaurant.photo">
+      <h4 class="restaurants-list-name">{{user.restaurant.name}}</h4>
     </a>
     <!-- include also meals available -->
   </div>

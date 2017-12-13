@@ -5,53 +5,130 @@
 }
 
 
-/* CATEGORIES FILTER */
+/*  */
 
-.restaurants-filter-container {
-  background: white;
-  /* border: 1px solid grey; */
-  border-radius: 10px;
-  margin: 1vh auto;
-  padding: 3vh;
-  display: flex;
-  flex-direction: row;
-  height: 5vh;
-  width: 80%;
+
+/* MOBILE MODE: UNDER 860 PX */
+
+
+/*  */
+
+@media screen and (max-width: 860px) {
+  /* CATEGORIES FILTER */
+  .restaurants-filter-container {
+    /* background: white; */
+    /* border: 1px solid grey; */
+    /* border-radius: 10px; */
+    margin: 1vh 0px;
+    padding: 3vh;
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    /* width: 80%; */
+  }
+  .restaurants-filter-dropdown {
+    border: 1px solid rgb(120, 164, 241);
+    margin: 1vh auto;
+    width: 90%;
+    height: 5vh;
+    text-align: center;
+    background: white;
+    color: grey;
+  }
+  /* RESTAURANT LIST AND TILES */
+  .restaurants-list-container {
+    /* background: white; */
+    /* border: 1px solid grey; */
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .restaurants-list-tiles {
+    background: white;
+    border: 1px solid rgb(120, 164, 241);
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 8px 0px;
+    width: 110%;
+    height: 120px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .restaurants-list-photo {
+    height: auto;
+    width: 100%;
+    opacity: 0.7;
+  }
+  .restaurants-list-name {
+    position: relative;
+    top: -150px;
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 0.2;
+    font-size: 2em;
+    /* background-color: rgba(120, 164, 241, 0.5); */
+    background-color: rgba(242, 206, 61, 0.646);
+  }
 }
 
-.restaurants-filter-dropdown {
-  border: 1px solid rgb(120, 164, 241);
-  margin: 1vh auto;
-  width: 90%;
-  height: 5vh;
-  text-align: center;
-  background: white;
-  color: grey;
-}
+
+/*  */
 
 
-/* RESTAURANT LIST AND TILES */
+/* WEBSITE MODE: FROM 860 PX */
 
-.restaurants-list-container {
-  background: white;
-  /* border: 1px solid grey; */
-  border-radius: 10px;
-  margin: 10px auto;
-  padding: 3vh;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
 
-.restaurants-list-tiles {
-  border: 1px solid rgb(120, 164, 241);
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 1vh auto;
-  text-align: center;
-  width: 90%;
-  height: 10vh;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
+/*  */
+
+@media screen and (min-width: 860px) {
+  /* CATEGORIES FILTER */
+  .restaurants-filter-container {
+    /* background: white; */
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 1vh auto;
+    padding: 3vh;
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 95%;
+  }
+  .restaurants-filter-dropdown {
+    border: 1px solid rgb(120, 164, 241);
+    margin: 1vh auto;
+    width: 90%;
+    height: 5vh;
+    text-align: center;
+    background: white;
+    color: grey;
+  }
+  /* RESTAURANT LIST AND TILES */
+  .restaurants-list-container {
+    /* background: white; */
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .restaurants-list-tiles {
+    background: rgb(175, 204, 255);
+    border: 1px solid rgb(120, 164, 241);
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 1vh auto;
+    text-align: center;
+    width: 375px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
 }

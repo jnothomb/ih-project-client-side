@@ -1,0 +1,9 @@
+.reservations-list-container {
+  border: 2px solid grey;
+  padding: 5px;
+}
+
+.reservations-list-tile {
+  border: 2px solid white;
+  margin: 5px;
+}

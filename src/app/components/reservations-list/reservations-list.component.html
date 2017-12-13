@@ -1,8 +1,15 @@
-<div *ngFor="let reservation of reservations">
-  <h5>{{reservation.meal.name}}</h5>
-  <h5>{{reservation.portions}}</h5>
-  <h5>{{reservation.meal.price}}</h5>
-  <h5>{{reservation.restaurant.restaurant.name}}</h5>
-  <!-- restaurant name -->
+<h3> Reservations List </h3>
+
+
+<div class="reservations-list-container">
+
+  <div class="reservations-list-tile" *ngFor="let reservation of reservations">
+    <h5>{{reservation.meal.name}}</h5>
+    <h5>{{reservation.portions}}</h5>
+    <h5>{{reservation.meal.price}}</h5>
+    <h5>{{reservation.restaurant.restaurant.name}}</h5>
+    <!-- restaurant name -->
+
+  </div>
 
 </div>
