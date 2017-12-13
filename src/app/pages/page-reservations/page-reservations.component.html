@@ -1,13 +1,3 @@
-<p>
-  page-reservations works!
-</p>
+<app-header-menu></app-header-menu>
 
-
-<div *ngFor="let reservation of reservations">
-  <h5>{{reservation.meal.name}}</h5>
-  <h5>{{reservation.portions}}</h5>
-  <h5>{{reservation.meal.price}}</h5>
-  <h5>{{reservation.restaurant.restaurant.name}}</h5>
-  <!-- restaurant name -->
-
-</div>
+<app-reservations-list></app-reservations-list>
