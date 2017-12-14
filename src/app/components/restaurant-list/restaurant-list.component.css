@@ -34,6 +34,20 @@
   color: grey;
 }
 
+.restaurants-filter-search-button {
+  background: rgb(197, 210, 232);
+  border-radius: 0px;
+  border: none;
+  margin: 0 auto;
+  width: 90%;
+  text-decoration-color: grey;
+  height: 5vh;
+  color: rgb(67, 130, 238);
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  max-width: 400px;
+}
+
 
 /* RESTAURANT LIST AND TILES */
 
@@ -69,7 +83,7 @@
 
 .restaurants-list-name {
   position: absolute;
-  top: 52px;
+  top: 60px;
   width: 100%;
   color: white;
   font-weight: bolder;
