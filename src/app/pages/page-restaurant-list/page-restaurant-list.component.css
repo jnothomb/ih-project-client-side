@@ -1,4 +1,6 @@
 .restaurant-list-title {
-  text-align: center;
-  margin: 0px auto;
+  margin: 1vh auto;
+  width: 100%;
+  padding: 0 50px 0;
+  /* max-width: 300px; */
 }

@@ -69,14 +69,14 @@
 
 .restaurants-list-name {
   position: absolute;
-  top: 0;
+  top: 52px;
   width: 100%;
   color: white;
   font-weight: bolder;
-  letter-spacing: 0.2;
-  font-size: 2em;
+  letter-spacing: 0.2px;
+  font-size: 1.7em;
   /* background-color: rgba(120, 164, 241, 0.5); */
-  background-color: rgba(242, 206, 61, 0.646);
+  background-color: rgba(120, 164, 241, 0.780);
 }
 
 
