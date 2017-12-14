@@ -29,7 +29,8 @@ export class AuthSignupComponent {
     this.error = null;
     this.auth.signup(this.user).subscribe(
       () => this.router.navigate(['/restaurants']),
-      (err) => this.error = err
+      (err) => this.error = err.json().error,
+      () => console.log(this.error)
     );
   }
 }

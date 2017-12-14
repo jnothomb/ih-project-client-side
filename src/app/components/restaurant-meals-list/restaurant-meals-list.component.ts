@@ -29,7 +29,6 @@ export class RestaurantMealsListComponent implements OnInit {
       return;
     } else {
       if (inputField.value > meal.availablePortions) {
-        console.log('u cant!');
         inputField.value = null;
         this.errorManager[ix] = true;
       } else {
