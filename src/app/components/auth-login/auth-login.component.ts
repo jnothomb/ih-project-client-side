@@ -30,7 +30,8 @@ export class AuthLoginComponent implements OnInit {
     this.authService.login(this.user)
       .subscribe(
       () => this.router.navigate(['/restaurants']),
-      (err) => this.error = err
+      (err) => this.error = err,
+      () => console.log(this.error)
       );
   }
 }

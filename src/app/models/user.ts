@@ -10,6 +10,7 @@ export class User {
         description: string,
         photo: string,
         address: string,
+        mapsLink: string,
         category: string
     };
 
