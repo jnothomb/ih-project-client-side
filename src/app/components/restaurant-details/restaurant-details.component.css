@@ -23,6 +23,8 @@
 
 .restaurants-details-text-container {
   /* border: 2px solid lightblue; */
+  display: flex;
+  flex-direction: column;
   max-width: 800px;
   margin: 15px auto;
   padding: 0 15px;
@@ -39,6 +41,28 @@
 
 .restaurant-details-address {
   text-align: center;
+}
+
+.restaurant-details-directions {
+  text-align: center;
+  background: rgb(120, 164, 241);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 8px;
+  padding: 10px;
+  letter-spacing: 0.2px;
+}
+
+.restaurant-details-phone {
+  text-align: center;
+  background: rgb(120, 164, 241);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 8px;
+  padding: 10px;
+  letter-spacing: 0.2px;
 }
 
 .restaurant-details-description {

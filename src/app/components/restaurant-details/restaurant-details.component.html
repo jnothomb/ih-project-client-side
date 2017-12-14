@@ -9,6 +9,8 @@
     <h3 class="restaurant-details-category"> {{user.restaurant.category}} </h3>
     <h3 class="restaurant-details-address"> {{user.restaurant.address}} </h3>
     <p class="restaurant-details-description"> {{user.restaurant.description}} </p>
+    <a class="restaurant-details-directions" [href]="user.restaurant.mapsLink"> Take Me There </a>
+    <a class="restaurant-details-phone" href="{{user.phoneNumber}}"> Call </a>
   </div>
 
 </div>

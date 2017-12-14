@@ -7,6 +7,12 @@
   margin: 0px auto;
 }
 
+.restaurant-meals-container p {
+  text-align: center;
+  color: darkred;
+  font-size: 22px;
+}
+
 .restaurant-meals-individual {
   border-top: 1px solid rgb(120, 164, 241);
   width: 100%;

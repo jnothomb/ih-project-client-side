@@ -3,14 +3,41 @@
   font-size: 20px;
 }
 
-.edit-profile-container {}
-
-input {
-  width: 100%;
-  margin: 0 auto;
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 450px;
+  text-align: center;
+  border-top: 1px solid rgb(120, 164, 241);
+  padding-top: 25px;
 }
 
-button {
+.edit-profile-container input {
   width: 100%;
   margin: 0 auto;
+  font-weight: lighter;
+  text-align: center;
+  background: inherit;
+  border: 1px grey solid;
+  color: black;
+  align-items: stretch;
+  height: 44px;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.edit-profile-container button {
+  background: rgb(120, 164, 241);
+  border-radius: 0px;
+  border: none;
+  margin: 0 auto;
+  width: 100%;
+  text-decoration-color: grey;
+  height: 44px;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 0.2px;
 }
