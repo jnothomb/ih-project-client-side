@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="156px" height="51px" viewBox="0 0 156 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#78A4F1" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-70.000000, -127.000000)">
+        <g id="Group" transform="translate(70.000000, 119.000000)">
+            <path d="M1,37.2558395 C5.346621,51.3569942 13.7962735,58.4075715 26.3489574,58.4075715 C45.1779832,58.4075715 55.7037338,50.1820733 63.8539275,47.8317055 C72.0041213,45.4813377 88.3950168,42.6763654 97.957583,42.6763654 C107.520149,42.6763654 148.020824,47.8317055 151.510412,47.8317055 C153.836804,47.8317055 155,44.3064168 155,37.2558395 L1,37.2558395 Z" id="Path" stroke="#78A4F1" stroke-width="0.5" fill="url(#linearGradient-1)" transform="translate(78.000000, 47.831706) scale(-1, 1) translate(-78.000000, -47.831706) "></path>
+            <text id="RESTOS" font-family="Ubuntu-Light, Ubuntu" font-size="36" font-weight="300" letter-spacing="6" fill="#78A4F1">
+                <tspan x="0" y="34">RESTU</tspan>
+                <tspan x="135.048" y="34">S</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
