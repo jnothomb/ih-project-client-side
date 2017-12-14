@@ -1,16 +1,23 @@
-<h3> Reservations List </h3>
-
+<div class="reservations-list-title">
+  <h1> My Reservations </h1>
+</div>
 
 <div class="reservations-list-container">
 
   <div class="reservations-list-tile" *ngFor="let reservation of reservations">
-    <h5>Meal Name: {{reservation.meal.name}}</h5>
-    <h5>Number of Portions: {{reservation.portions}}</h5>
-    <h5>Portion Price: {{reservation.meal.price}}</h5>
-    <h5>Restaurant: {{reservation.restaurant.restaurant.name}}</h5>
-    <h5>Total: {{reservation.meal.price * reservation.portions}}</h5>
+    <h4 class="reservations-list-item-details"> You have ordered: {{reservation.portions}}</h4>
+    <h4 class="reservations-list-item-details"> {{reservation.meal.name}}</h4>
+    <h4 class="reservations-list-item-details"> from {{reservation.restaurant.restaurant.name}}</h4>
+    <h4 class="reservations-list-item-details"> at {{reservation.meal.price}} &euro; each</h4>
+    <h4 class="reservations-list-item-details"> for a total of {{reservation.meal.price * reservation.portions}} &euro;</h4>
     <!-- restaurant name -->
-
   </div>
 
+
+</div>
+
+<div class="reservations-list-message">
+  <br>
+  <p> Here's a Happy Chef for you!</p>
+  <img class="reservations-list-penguin-chef" src="../../assets/images/penguin.png">
 </div>

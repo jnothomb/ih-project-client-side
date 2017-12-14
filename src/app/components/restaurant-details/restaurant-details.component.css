@@ -1,12 +1,45 @@
 .restaurants-details-container {
-  border: 2px solid grey;
+  margin-top: 15px;
+  /* border: 2px solid grey; */
 }
 
 .restaurants-details-photo {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  align-self: center;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.restaurants-details-photo img {
   margin: 0px auto;
   /* clip-path: circle(75px at 50% 50%) */
   display: block;
   width: 100%;
   height: auto;
-  overflow: hidden;
+}
+
+.restaurants-details-text-container {
+  /* border: 2px solid lightblue; */
+  margin: 15px;
+}
+
+.restaurant-details-name {
+  text-align: center;
+  margin: 0px;
+}
+
+.restaurant-details-category {
+  text-align: center;
+}
+
+.restaurant-details-address {
+  text-align: center;
+}
+
+.restaurant-details-description {
+  line-height: 28px;
+  text-align: center;
 }

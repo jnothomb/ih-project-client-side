@@ -1,0 +1,37 @@
+.confirm-meals-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgb(120, 164, 241);
+}
+
+.confirm-meals-order-name h1 {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px;
+  letter-spacing: 0.2;
+}
+
+.confirm-meals-order-review h4 {
+  text-align: center;
+  font-size: 15px;
+  margin: 5px;
+  color: rgb(120, 164, 241);
+  letter-spacing: 0.2;
+}
+
+.confirm-meals-total-price h4 {
+  text-align: center;
+  font-size: 15px;
+  color: rgb(120, 164, 241);
+  letter-spacing: 0.2;
+}
+
+.confirm-meals-button {
+  background: rgba(242, 206, 61, 0.646);
+  width: 100%;
+  height: 44px;
+  color: rgb(120, 164, 241);
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+}

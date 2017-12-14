@@ -1,9 +1,46 @@
+.reservations-list-title h1 {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  /* letter-spacing: 0.2; */
+}
+
 .reservations-list-container {
-  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
   padding: 5px;
 }
 
 .reservations-list-tile {
-  border: 2px solid white;
+  border-top: 1px solid rgb(120, 164, 241);
+  border-bottom: 1px solid rgb(120, 164, 241);
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.reservations-list-item-details {
+  text-align: center;
+  font-size: 15px;
   margin: 5px;
+  color: rgb(120, 164, 241);
+  letter-spacing: 0.2;
+}
+
+.reservations-list-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservations-list-message p {
+  text-align: center;
+  font-size: 15px;
+  color: rgb(120, 164, 241);
+  letter-spacing: 0.2;
+}
+
+.reservations-list-penguin-chef {
+  height: 100px;
+  width: auto;
+  margin: auto;
 }

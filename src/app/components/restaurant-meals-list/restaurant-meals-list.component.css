@@ -1,10 +1,50 @@
 .restaurant-meals-container {
-  border: 2px solid grey;
-  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
 }
 
 .restaurant-meals-individual {
-  border: 1px solid white;
-  margin: 10px;
-  border-radius: 10px;
+  border-top: 1px solid rgb(120, 164, 241);
+  width: 90%;
+  /* border-radius: 5px; */
+  margin: 5px auto;
+  padding: 15px;
+}
+
+.restaurant-meals-name {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  letter-spacing: 0.2;
+}
+
+.restaurant-meals-availability {
+  text-align: center;
+  margin: 15px auto;
+  font-size: 15px;
+  letter-spacing: 0.2;
+}
+
+input[placeholder] {
+  font-weight: lighter;
+  font-size: 15px;
+  text-align: center;
+  border: 2px rgba(242, 206, 61, 0.646) solid;
+  margin: 5px auto;
+  color: rgb(120, 164, 241);
+  align-items: stretch;
+  width: 90%;
+  height: 30px;
+}
+
+.restaurant-meals-reserve {
+  background: rgba(242, 206, 61, 0.646);
+  width: 100%;
+  height: 44px;
+  color: rgb(120, 164, 241);
+  font-weight: bold;
+  border: none;
+  font-size: 15px;
 }

@@ -1,13 +1,24 @@
 <app-header-menu></app-header-menu>
 
-<p>
-  page-confirm-meals works!
-</p>
-<ng-container *ngIf="meal">
-  <h1>Your Reservation from {{meal.restaurant.name}}</h1>
-  <h4>{{quantity.quantity}}x {{meal.name}} </h4>
-  <h6> price: {{quantity.quantity * meal.price}}</h6>
-</ng-container>
+<div class="confirm-meals-container">
 
-<!-- <h5> {{meal.name}}</h5> -->
-<button (click)="reserveMeal()">Reserve</button>
+  <ng-container *ngIf="meal">
+
+    <div class="confirm-meals-order-name">
+      <h1>Your Reservation from ... {{meal.restaurant.name}} ... is:</h1>
+    </div>
+
+    <div class="confirm-meals-order-review">
+      <h4>{{quantity.quantity}} x {{meal.name}} </h4>
+    </div>
+
+    <div class="confirm-meals-total-price">
+      <h4> Delicious food in exchange for {{quantity.quantity * meal.price}} &euro; </h4>
+    </div>
+
+  </ng-container>
+
+  <!-- <h5> {{meal.name}}</h5> -->
+  <button class="confirm-meals-button" (click)="reserveMeal()">I confirm that I shall go pick it up :)</button>
+
+</div>

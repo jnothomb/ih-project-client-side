@@ -1,7 +1,14 @@
 <div class="restaurants-details-container">
-  <img class="restaurants-details-photo" [src]="user.restaurant.photo">
-  <h1> {{user.restaurant.name}}</h1>
-  <h3> {{user.restaurant.address}} </h3>
-  <h3> {{user.restaurant.category}} </h3>
-  <p> {{user.restaurant.description}} </p>
+
+  <div class="restaurants-details-photo">
+    <img [src]="user.restaurant.photo">
+  </div>
+
+  <div class="restaurants-details-text-container">
+    <h1 class="restaurant-details-name"> {{user.restaurant.name}}</h1>
+    <h3 class="restaurant-details-category"> {{user.restaurant.category}} </h3>
+    <h3 class="restaurant-details-address"> {{user.restaurant.address}} </h3>
+    <p class="restaurant-details-description"> {{user.restaurant.description}} </p>
+  </div>
+
 </div>
