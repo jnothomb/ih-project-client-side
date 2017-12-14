@@ -1,10 +1,11 @@
 <div class="restaurants-filter-container">
-  <select class="restaurants-filter-dropdown">
+  <select [(ngModel)]="selectedCategory" class="restaurants-filter-dropdown">
     <option value="filter-by-category">Select Category</option>
     <option value="japanese">Japanese</option>
-    <option value="italian">Italian</option>
+    <option value="burgers">Burgers</option>
     <option value="peruvian">Peruvian</option>
   </select>
+  <button (click)="filterByCategory()" type="button">submit</button>
 </div>
 
 <div class="restaurants-list-container">

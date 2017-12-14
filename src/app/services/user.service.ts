@@ -82,6 +82,13 @@ export class UserService {
       .map((res) => res.json());
   }
 
+  filterByCategory(category) {
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/category/${category}`, options)
+      .map((res) => res.json());
+  }
 }
 
 
