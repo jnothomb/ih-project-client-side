@@ -9,7 +9,7 @@
       <h3 class="restaurant-meals-name">{{meal.name}}</h3>
       <h5 class="restaurant-meals-availability"> {{meal.availablePortions}} are available at {{meal.price}} &euro; each </h5>
 
-      <form #myForm="ngForm" (ngSubmit)="reserveMeal(myForm, portionField, meal, ix)">
+      <form class="form" #myForm="ngForm" (ngSubmit)="reserveMeal(myForm, portionField, meal, ix)">
         <div class="form-group field" [ngClass]="{'has-error': feedbackEnabled && portionField.invalid}">
           <input class="restaurant-meals-quantity-chosen" type="number" name="portions" required #portionField [max]="meal.availablePortions"
             placeholder="I will take.." />
