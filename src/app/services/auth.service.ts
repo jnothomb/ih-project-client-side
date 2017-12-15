@@ -5,10 +5,10 @@ import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
+import { environment } from '../../environments/environment';
+const apiUrl = environment.apiUrl + '/auth';
 
 import { User } from '../models/user';
-
-const apiUrl = 'http://localhost:3000/auth';
 
 @Injectable()
 export class AuthService {

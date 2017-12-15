@@ -3,6 +3,8 @@ import { Http, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
+import { environment } from '../../environments/environment';
+const apiUrl = environment.apiUrl;
 
 
 import { User } from '../models/user';
@@ -11,7 +13,7 @@ import { Meal } from '../models/meal';
 @Injectable()
 export class UserService {
 
-  baseURL = 'http://localhost:3000';
+  baseURL = apiUrl;
 
   constructor(private http: Http) { }
 
