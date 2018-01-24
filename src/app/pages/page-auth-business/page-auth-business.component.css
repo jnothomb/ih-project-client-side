@@ -1,0 +1,12 @@
+.individual-auth-title {
+  text-align: center;
+  margin: 5vh auto;
+  margin-bottom: 0.5vh;
+  color: grey;
+}
+
+.individual-auth-logo {
+  margin: 1vh auto;
+  width: 100%;
+  padding: 0 50px 0;
+}

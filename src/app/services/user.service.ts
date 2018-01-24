@@ -7,6 +7,9 @@ import 'rxjs/add/operator/map';
 
 import { User } from '../models/user';
 import { Meal } from '../models/meal';
+import { Reservation } from '../models/reservation';
+
+const baseURL = 'http://localhost:3000';
 
 @Injectable()
 export class UserService {
@@ -14,6 +17,8 @@ export class UserService {
   baseURL = 'http://localhost:3000';
 
   constructor(private http: Http) { }
+
+
 
   getRestaurants() {
     const options = new RequestOptions();

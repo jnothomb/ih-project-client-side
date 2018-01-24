@@ -1,0 +1,51 @@
+/* Format of Entire Container */
+
+.individual-auth-signup-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 450px;
+  text-align: center;
+  border-top: 1px solid rgb(120, 164, 241)
+}
+
+
+/* Title Styling */
+
+.individual-auth-signup-title {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+}
+
+
+/* Input Boxes Styling */
+
+.individual-auth-signup-container input {
+  font-weight: lighter;
+  text-align: center;
+  background: inherit;
+  border: 1px grey solid;
+  color: black;
+  align-items: stretch;
+  width: 100%;
+  height: 44px;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+button {
+  background: rgb(120, 164, 241);
+  border-radius: 0px;
+  border: none;
+  margin: 0 auto;
+  width: 100%;
+  text-decoration-color: grey;
+  height: 44px;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+}

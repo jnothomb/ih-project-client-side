@@ -11,6 +11,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 import { AuthGuardService } from './guards/auth-guard.service';
+import { BusinessService } from './services/bus.service';
+
+
 
 import { AppComponent } from './app.component';
 
@@ -20,6 +23,7 @@ import { PageRestaurantPageComponent } from './pages/page-restaurant-page/page-r
 import { PageConfirmMealsComponent } from './pages/page-confirm-meals/page-confirm-meals.component';
 import { PageProfileIndividualComponent } from './pages/page-profile-individual/page-profile-individual.component';
 import { PageReservationsComponent } from './pages/page-reservations/page-reservations.component';
+import { PageAuthBusinessComponent } from './pages/page-auth-business/page-auth-business.component';
 
 
 import { AuthLoginComponent } from './components/auth-login/auth-login.component';
@@ -29,6 +33,9 @@ import { RestaurantDetailsComponent } from './components/restaurant-details/rest
 import { RestaurantMealsListComponent } from './components/restaurant-meals-list/restaurant-meals-list.component';
 import { ReservationsListComponent } from './components/reservations-list/reservations-list.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
+import { BusAuthLoginComponent } from './components/bus-auth-login/bus-auth-login.component';
+import { BusAuthSignupComponent } from './components/bus-auth-signup/bus-auth-signup.component';
+
 
 
 // DEFINITION OF ROUTES
@@ -41,7 +48,9 @@ const routes: Routes = [
   { path: 'restaurants/:id/meals', canActivate: [AuthGuardService], component: PageRestaurantPageComponent },
   { path: 'meal/:id/confirm', canActivate: [AuthGuardService], component: PageConfirmMealsComponent },
   { path: 'edit-profile', canActivate: [AuthGuardService], component: PageProfileIndividualComponent },
-  { path: 'reservations', canActivate: [AuthGuardService], component: PageReservationsComponent }
+  { path: 'reservations', canActivate: [AuthGuardService], component: PageReservationsComponent },
+  { path: 'business/auth', component: PageAuthBusinessComponent },
+  { path: 'business', component: PageAuthBusinessComponent },
 ];
 
 @NgModule({
@@ -59,7 +68,10 @@ const routes: Routes = [
     RestaurantMealsListComponent,
     ReservationsListComponent,
     HeaderMenuComponent,
-    PageReservationsComponent
+    PageReservationsComponent,
+    PageAuthBusinessComponent,
+    BusAuthLoginComponent,
+    BusAuthSignupComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +80,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
 
   ],
-  providers: [AuthService, UserService, AuthGuardService],
+  providers: [AuthService, UserService, AuthGuardService, BusinessService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -30,7 +30,7 @@ export class AuthSignupComponent {
     this.auth.signup(this.user).subscribe(
       () => this.router.navigate(['/restaurants']),
       (err) => this.error = err.json().error,
-      () => console.log(this.error)
+      () => console.log(this.error),
     );
   }
 }
