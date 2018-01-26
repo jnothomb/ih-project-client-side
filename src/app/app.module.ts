@@ -25,6 +25,7 @@ import { PageProfileIndividualComponent } from './pages/page-profile-individual/
 import { PageReservationsComponent } from './pages/page-reservations/page-reservations.component';
 import { PageAuthBusinessComponent } from './pages/page-auth-business/page-auth-business.component';
 
+import { PageBusinessHomeComponent } from './pages/page-business-home/page-business-home.component';
 
 import { AuthLoginComponent } from './components/auth-login/auth-login.component';
 import { AuthSignupComponent } from './components/auth-signup/auth-signup.component';
@@ -33,8 +34,15 @@ import { RestaurantDetailsComponent } from './components/restaurant-details/rest
 import { RestaurantMealsListComponent } from './components/restaurant-meals-list/restaurant-meals-list.component';
 import { ReservationsListComponent } from './components/reservations-list/reservations-list.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
+
+
 import { BusAuthLoginComponent } from './components/bus-auth-login/bus-auth-login.component';
 import { BusAuthSignupComponent } from './components/bus-auth-signup/bus-auth-signup.component';
+import { BusinessAppService } from './services/business.service';
+import { RestaurantProfileComponent } from './components/restaurant-profile/restaurant-profile.component';
+import { RestaurantMealsFormComponent } from './components/restaurant-meals-form/restaurant-meals-form.component';
+import { BusProfileComponent } from './components/bus-profile/bus-profile.component';
+
 
 
 
@@ -50,7 +58,7 @@ const routes: Routes = [
   { path: 'edit-profile', canActivate: [AuthGuardService], component: PageProfileIndividualComponent },
   { path: 'reservations', canActivate: [AuthGuardService], component: PageReservationsComponent },
   { path: 'business/auth', component: PageAuthBusinessComponent },
-  { path: 'business', component: PageAuthBusinessComponent },
+  { path: 'business', canActivate: [AuthGuardService], component: PageBusinessHomeComponent },
 ];
 
 @NgModule({
@@ -71,7 +79,11 @@ const routes: Routes = [
     PageReservationsComponent,
     PageAuthBusinessComponent,
     BusAuthLoginComponent,
-    BusAuthSignupComponent
+    BusAuthSignupComponent,
+    PageBusinessHomeComponent,
+    RestaurantProfileComponent,
+    RestaurantMealsFormComponent,
+    BusProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +92,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
 
   ],
-  providers: [AuthService, UserService, AuthGuardService, BusinessService],
+  providers: [AuthService, UserService, AuthGuardService, BusinessService, BusinessAppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

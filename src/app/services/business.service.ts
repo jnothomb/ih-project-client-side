@@ -9,13 +9,24 @@ import { User } from '../models/user';
 import { Meal } from '../models/meal';
 import { Reservation } from '../models/reservation';
 
+const baseURL = 'http://localhost:3000';
+
 @Injectable()
-export class BusinessService {
+export class BusinessAppService {
   private user: User;
 
   baseURL = 'http://localhost:3000';
 
   constructor(private http: Http) { }
 
+
+
+  getUserProfile() {
+    const options = new RequestOptions();
+    options.withCredentials = true;
+
+    return this.http.get(`${this.baseURL}/business`, options)
+      .map((res) => res.json());
+  }
 
 }
